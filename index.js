@@ -378,7 +378,7 @@ function changed(Model, options) {
         var newVal = newVals[key];
         debug('getChangedProperties:   - new value %s ', newVal);
 
-        if (!oldVals[key] || !_.isEqual(oldVals[key], newVal)) {
+        if (!_.isEqual(oldVals[key], newVal)) {
           debug('getChangedProperties:   - changed or new value: %s itemId: %s', newVal, itemId);
 
           changedProperties[itemId][key] = newVal;
